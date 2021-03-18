@@ -443,7 +443,7 @@ class OperationHandler implements ListSelectionListener, ActionListener, Runnabl
     newFrame.setResizable(true);//newFrame.setResizable(false);
 
     JPanel topPane = new JPanel();
-    JLabel label1 = new JLabel("Search entries by First Name or Last Name or Both, Spaced Via a Single Space:");
+    JLabel label1 = new JLabel("Search entries by First Name, Last Name (or Both), Email, or Phone Number:");
     topPane.add(label1);
 
     JPanel centerPane = new JPanel();
@@ -825,7 +825,9 @@ class OperationHandler implements ListSelectionListener, ActionListener, Runnabl
 
         if(SearchStr.equalsIgnoreCase(con.getFName()) ||
                 SearchStr.equalsIgnoreCase(con.getLName()) ||
-                SearchStr.equalsIgnoreCase(con.getFName() + " " + con.getLName()))
+                SearchStr.equalsIgnoreCase(con.getFName() + " " + con.getLName()) ||
+                SearchStr.equalsIgnoreCase(con.getEMail()) ||
+                SearchStr.equalsIgnoreCase(con.getPhoneNo()))
         {
           flag=true;
 
