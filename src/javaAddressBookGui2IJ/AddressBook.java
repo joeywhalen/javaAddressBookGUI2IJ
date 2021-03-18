@@ -197,7 +197,7 @@ public class AddressBook implements ActionListener {
 
       try
       {
-        bfout = new FileOutputStream(filename + "/data.txt");
+        bfout = new FileOutputStream(filename + "/data.dat");
       }
       catch(Exception e)
       {
@@ -205,7 +205,7 @@ public class AddressBook implements ActionListener {
       }
       try
       {
-        bfin = new FileInputStream("data/data.txt");
+        bfin = new FileInputStream("data/data.dat");
       }
       catch(Exception e)
       {
@@ -335,7 +335,7 @@ class OperationHandler implements ListSelectionListener, ActionListener, Runnabl
   OperationHandler() {
 
     try {
-      fis = new FileInputStream("data/data.txt");
+      fis = new FileInputStream("data/data.dat");
       ois = new ObjectInputStream(fis);
       v = (Vector) ois.readObject();
       ois.close();
@@ -353,7 +353,7 @@ class OperationHandler implements ListSelectionListener, ActionListener, Runnabl
     try
     {
       FileOutputStream fos = new
-              FileOutputStream("data/data.txt");
+              FileOutputStream("data/data.dat");
       ObjectOutputStream oos = new
               ObjectOutputStream(fos);
       oos.writeObject(v);
@@ -651,7 +651,7 @@ class OperationHandler implements ListSelectionListener, ActionListener, Runnabl
 
     try
     {
-      fishelp= new FileInputStream("help/help.txt");
+      fishelp= new FileInputStream("help/help.dat");
     }
     catch(Exception e)
     {
